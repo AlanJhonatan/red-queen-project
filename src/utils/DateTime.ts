@@ -10,6 +10,8 @@ export function getFormattedDateTime() {
     second: '2-digit',
   });
 
-  const formattedDateTime = formatter.format(now);
-  return formattedDateTime.replace(/\/|,|:/g, '-');
+  const formattedDateTime = formatter.format(now).replace(/\/|,|:/g, '-');
+  const cleanedDateTime = formattedDateTime.replace(' ', '');
+
+  return cleanedDateTime
 }

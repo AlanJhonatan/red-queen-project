@@ -4,16 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "tsup src/index.ts --format esm,cjs --dts && node dist/index.mjs",
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
-    "dev:once": "tsup src/index.ts --format esm,cjs --dts && node dist/index.mjs",
     "lint": "eslint src/**/*.ts* --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/twit": "^2.2.33",
+    "@types/node": "^20.8.10",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   },

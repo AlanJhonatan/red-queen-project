@@ -1,10 +1,15 @@
 import fs from 'fs/promises'
 import { getFormattedDateTime } from './DateTime'
 
-export async function logger(data: any) {
-  const output = JSON.stringify(data, null, 2)
+interface LoggerParams {
+  data: any,
+  tag?: string
+}
 
-  console.log(output)
-  await fs.writeFile(`output-${getFormattedDateTime()}.json`, output)
-  console.log('logged at: ', getFormattedDateTime())
+export async function logger(params: LoggerParams) {
+  const output = JSON.stringify(params.data, null, 2)
+
+  console.log(params.tag || '', output)
+  await fs.writeFile(`${params.tag}-output-${getFormattedDateTime()}.json`, output)
+  console.log('[INFO] logged at: ', getFormattedDateTime())
 }
