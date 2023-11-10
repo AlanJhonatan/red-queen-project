@@ -1,6 +1,9 @@
 dist/
 node_modules/
 
+samples/
+logs/
+
 .env
 
 output*.json

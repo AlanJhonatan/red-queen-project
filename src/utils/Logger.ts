@@ -10,6 +10,6 @@ export async function logger(params: LoggerParams) {
   const output = JSON.stringify(params.data, null, 2)
 
   console.log(params.tag || '', output)
-  await fs.writeFile(`${params.tag}-output-${getFormattedDateTime()}.json`, output)
+  await fs.writeFile(`logs/${params.tag}-output-${getFormattedDateTime()}.json`, output)
   console.log('[INFO] logged at: ', getFormattedDateTime())
 }

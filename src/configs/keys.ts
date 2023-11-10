@@ -1,11 +1,13 @@
 import 'dotenv/config'
 
 export const TwitterKeys = {
-  consumerKey: process.env['CONSUMER_KEY'] as string,
-  consumerSecret: process.env['CONSUMER_SECRET'] as string,
-  accessToken: process.env['ACCESS_TOKEN'] as string,
-  accessTokenSecret: process.env['ACCESS_TOKEN_SECRET'] as string,
-  bearerToken: process.env['BEARER_TOKEN'] as string,
-  clientId: process.env['CLIENT_ID'] as string,
-  clientSecret: process.env['CLIENT_SECRET'] as string,
+  apiKey: process.env['API_KEY'] as string,
+  apiSecret: process.env['API_KEY_SECRET'] as string,
+  acessToken: process.env['ACCESS_TOKEN'] as string,
+  accessTokenSecret: process.env['ACESS_TOKEN_SECRET'] as string,
+}
+
+export const RapidAPIKeys = {
+  RAPID_BASE_URL: process.env['RAPID_BASE_URL'] as string,
+  RAPID_API_KEY: process.env['RAPID_API_KEY'] as string,
 }
